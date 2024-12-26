@@ -37,9 +37,13 @@ class WelcomeView extends StatelessWidget {
               ),
             ),
             SizedBox(height: screenHeight * 0.02), // 2% of screen height
-            ButtonInWlcomeview(text: 'Log In',color: Colors.orange,),
+            ButtonInWlcomeview(text: 'Log In',color: Colors.orange,onPressed: () {
+              Navigator.pushNamed(context, 'login');
+            },),
           SizedBox(height: screenHeight * 0.02), // 2% of screen height
-          ButtonInWlcomeview(color: Colors.blue, text: 'Sign Up',),
+          ButtonInWlcomeview(color: Colors.blue, text: 'Sign Up',onPressed: () {
+            Navigator.pushNamed(context, 'register');
+          },),
           ],
         ),
       ),
