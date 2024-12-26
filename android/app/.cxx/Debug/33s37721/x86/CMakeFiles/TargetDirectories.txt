@@ -1,0 +1,2 @@
+E:/MessangerMe/messangerme/android/app/.cxx/Debug/33s37721/x86/CMakeFiles/edit_cache.dir
+E:/MessangerMe/messangerme/android/app/.cxx/Debug/33s37721/x86/CMakeFiles/rebuild_cache.dir
