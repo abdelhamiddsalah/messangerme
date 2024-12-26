@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:messangerme/views/widgets/button_in_welcome_view.dart';
+import 'package:messangerme/views/widgets/constimage.dart';
 import 'package:messangerme/views/widgets/rowtexts.dart';
 import 'package:messangerme/views/widgets/textfield_item.dart';
 
@@ -13,33 +14,29 @@ class SignupView extends StatelessWidget {
     final screenHeight = mediaQuery.size.height;
     return Scaffold(
       backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 20,
-            vertical: 20,
-          ),
-          child: Column(
-             crossAxisAlignment: CrossAxisAlignment.stretch,
-              mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                'assets/images/logo (1).png',
-                width: screenWidth * 0.5, // 50% of screen width
-                height: screenHeight * 0.25, // 25% of screen height
-              ),
-              SizedBox(height: screenHeight * 0.02), // 2% of screen height
-              TextfieldItem(text: 'Email',),
-              SizedBox(height: screenHeight * 0.02), // 2% of screen height
-              TextfieldItem(text: 'Password',),
-              SizedBox(height: screenHeight * 0.02), // 2% of screen height
-              ButtonInWlcomeview(text: 'Signup', color: Colors.blue,),
-              SizedBox(height: screenHeight * 0.02), // 2% of screen height
-              Rowtexts(text2: 'Already have an account?', text1: 'Login',onPressed: () {
-                Navigator.pushNamed(context, 'login');
-              },),
-            ],
-          ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 20,
+          vertical: 20,
+        ),
+        child: Column(
+           crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ConstImage(screenWidth: screenWidth, screenHeight: screenHeight),
+            SizedBox(height: screenHeight * 0.02), // 2% of screen height
+            TextfieldItem(text: 'Email',),
+            SizedBox(height: screenHeight * 0.02), // 2% of screen height
+            TextfieldItem(text: 'Password',),
+            SizedBox(height: screenHeight * 0.02), // 2% of screen height
+            ButtonInWlcomeview(text: 'Signup', color: Colors.blue,onPressed: () {
+              Navigator.pushNamed(context, 'chat');
+            },),
+            SizedBox(height: screenHeight * 0.02), // 2% of screen height
+            Rowtexts(text2: 'Already have an account?', text1: 'Login',onPressed: () {
+              Navigator.pushNamed(context, 'login');
+            },),
+          ],
         ),
       ),
     );
